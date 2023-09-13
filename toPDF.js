@@ -13,8 +13,8 @@ async function getStaticHTML(inputFilePath) {
   await page.goto(url, { waitUntil: "networkidle0" });
 
   const staticHTML = await page.content();
-
   await browser.close();
+  // fs.writeFileSync('out.html', staticHTML); // For debugging
 
   return staticHTML;
 }
@@ -33,9 +33,11 @@ async function convertHTMLtoPDF(htmlContent, outputPdf, isTest = true) {
         test: isTest,
         document_type: "pdf",
         document_content: htmlContent,
-        javascript: true,
+        // document_url: "https://docraptor.com/examples/invoice.html",
+        // javascript: true,
         prince_options: {
-          media: "print",
+          javascript: true,
+          media: "print", // @media 'screen' or 'print' CSS
         },
       },
     },
