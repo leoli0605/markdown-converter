@@ -145,3 +145,4 @@ dist
 
 *.html
 *.pdf
+.DS_Store

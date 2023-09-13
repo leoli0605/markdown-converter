@@ -88,7 +88,7 @@ async function convertMarkdownToHTML(filePath) {
     filePath: filePath,
     config: {
       configPath: configPath,
-      previewTheme: "github-light.css",
+      previewTheme: "one-light.css",
       codeBlockTheme: "default.css",
       printBackground: true,
       enableScriptExecution: true,
