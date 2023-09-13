@@ -24,6 +24,12 @@ node markdown2html.js <markdown file path>
 node markdown2html.js test\markdown.md
 ```
 
+### TODO
+
+- [ ] Use `puppeteer` to convert to PDF and find a workaround way to support TOC to the PDF bookmarks.
+
+---
+
 ```mermaid
 flowchart LR
 
