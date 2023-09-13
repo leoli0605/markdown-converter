@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@shd101wyy/mume": "^0.7.7"
+    "@shd101wyy/mume": "^0.7.7",
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "puppeteer": "^21.2.1"
   }
 }

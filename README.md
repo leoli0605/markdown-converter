@@ -1,58 +1,35 @@
 # Markdown Converter
 
-This is a simple markdown converter that converts markdown files to HTML files.
+This is a simple markdown converter that converts markdown files into HTML and PDF files. It is based on the [@shd101wyy/mume](https://github.com/shd101wyy/mume) package, with adjustments made to suit specific needs for converting markdown files into HTML.
 
-And based on the [@shd101wyy/mume](https://github.com/shd101wyy/mume) package, I made adjustments according to my own needs.
+This tool utilizes `puppeteer` for converting HTML into static HTML files, and the online server [DocRaptor](https://docraptor.com/) for converting to PDF files. The reason for using `DocRaptor` is its engine, `Prince`, which supports the Table of Contents (TOC) feature. However, since `Prince` is not free, `DocRaptor` is used as it offers 5 free PDF conversions per month, and unlimited test PDF files.
 
-We use `prince` to convert to PDF instead of `puppeteer` because is not support convert TOC to the PDF bookmarks.
+## Requirements
 
-### Installation
+- [Node.js](https://nodejs.org/en/) >= v18.16.0
+
+## Installation
 
 ```bash
 npm install
 ```
 
-### Usage
+## Usage
 
-```bash
-node markdown2html.js <markdown file path>
-```
+- To convert markdown to HTML:
 
-### Example
+  ```shell
+  node toHTML.js <markdown file path>
+  ```
 
-```bash
-node markdown2html.js test\markdown.md
-```
+- To convert markdown or HTML to PDF:
 
-### TODO
+  ```shell
+  node toPDF.js <markdown or HTML file path> <test mode>
+  ```
 
-- [ ] Use `puppeteer` to convert to PDF and find a workaround way to support TOC to the PDF bookmarks.
+  The second parameter indicates whether to use `test` mode. If it is set to `true`, the `test` mode will be activated, and the resulting PDF file will contain a watermark. However, it is free and unlimited. If it is set to `false`, the `production` mode will be activated, and the resulting PDF file will not contain a watermark. However, it is limited to 5 free PDF files per month.
 
----
+## TODO
 
-```mermaid
-flowchart LR
-
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-pie
-"Dogs" : 386
-"Cats" : 85.9
-"Rats" : 15
-```
-
-```mermaid
-gantt
-    section Section
-    Completed :done,    des1, 2014-01-06,2014-01-08
-    Active        :active,  des2, 2014-01-07, 3d
-    Parallel 1   :         des3, after des1, 1d
-    Parallel 2   :         des4, after des1, 1d
-    Parallel 3   :         des5, after des3, 1d
-    Parallel 4   :         des6, after des4, 1d
-```
+- [ ] There are still some issues when converting SVG to PDF, which need to be addressed.
