@@ -33,4 +33,5 @@ npm install
 ## TODO
 
 - [ ] There are still some issues when converting SVG to PDF, which need to be addressed.
+  - Since `Prince` does not support SVG with `foreignObject` elements.
 - [ ] Add some CSS styles to the HTML file to make it look better.
