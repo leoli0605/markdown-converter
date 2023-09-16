@@ -14,7 +14,7 @@ async function getStaticHTML(inputFilePath) {
 
   const staticHTML = await page.content();
   await browser.close();
-  // fs.writeFileSync('out.html', staticHTML); // For debugging
+  fs.writeFileSync('static.html', staticHTML); // For debugging
 
   return staticHTML;
 }

@@ -3,13 +3,11 @@
 > This will convert to PDF with some issues.
 
 ```mermaid
-
-graph LR
+flowchart LR
     A[Square Rect] -- Link text --> B((Circle))
     A --> C(Round Rect)
     B --> D{Rhombus}
     C --> D
-
 ```
 
 <div STYLE="page-break-after: always;"></div>
@@ -19,7 +17,6 @@ graph LR
 > This will not have any issues converting to PDF.
 
 ```mermaid
-
 sequenceDiagram
     participant Alice
     participant Bob
@@ -31,5 +28,4 @@ sequenceDiagram
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
-
 ```
