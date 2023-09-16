@@ -34,4 +34,6 @@ npm install
 
 - [ ] There are still some issues when converting SVG to PDF, which need to be addressed.
   - Since `Prince` does not support SVG with `foreignObject` elements.
+  - [LINK1](https://github.com/puppeteer/puppeteer/issues/1778)
+  - [LINK2](https://github.com/puppeteer/puppeteer/issues/3625)
 - [ ] Add some CSS styles to the HTML file to make it look better.
